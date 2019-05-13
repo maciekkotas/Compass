@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_lat"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_dialog_description"
+        style="@style/text_input_layout_style">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edittext_dialog_lat"
+            android:hint="@string/latitude"
+            style="@style/edit_text_input_style" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_lng"
+        style="@style/text_input_layout_style"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_lat">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edittext_dialog_lng"
+            style="@style/edit_text_input_style"
+            android:hint="@string/longitude" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textview_dialog_description"
+        android:text="@string/destination"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/text_dialog_description" />
+
+    <Button
+        android:id="@+id/button_dialog_positive"
+        android:text="@string/ok"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_lng"
+        app:layout_constraintTop_toTopOf="@+id/button_dialog_negative"
+        style="@style/positive_btn_style" />
+
+    <Button
+        android:id="@+id/button_dialog_negative"
+        android:text="@string/cancel"
+        app:layout_constraintStart_toStartOf="@+id/text_input_layout_lng"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_lng"
+        style="@style/negative_btn_style" />
+</android.support.constraint.ConstraintLayout>

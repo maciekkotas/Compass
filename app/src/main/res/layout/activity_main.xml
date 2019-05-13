@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+    <TextView
+        android:id="@+id/latitudeTv"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        style="@style/text_lat_style" />
+
+    <TextView
+        android:id="@+id/longitudeTv"
+        app:layout_constraintStart_toEndOf="@+id/latitudeTv"
+        app:layout_constraintTop_toTopOf="@+id/latitudeTv"
+        style="@style/text_lng_style" />
+
+    <TextView
+        android:id="@+id/degreeTv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/roseIv"
+        style="@style/text_degrees_style" />
+
+    <TextView
+        android:id="@+id/distanceTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/degreeTv"
+        style="@style/text_distance_style" />
+
+
+    <ImageView
+        android:id="@+id/compassIv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/compass"
+        style="@style/image_style" />
+
+    <ImageView
+        android:id="@+id/roseIv"
+        style="@style/image_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/rose" />
+
+    <ImageView
+        android:id="@+id/arrowIv"
+        style="@style/image_style"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/desIv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_location_on"
+        style="@style/image_des_style" />
+
+    <TextView
+        android:id="@+id/desLatTv"
+        app:layout_constraintStart_toEndOf="@+id/desIv"
+        app:layout_constraintTop_toTopOf="@+id/desIv"
+        style="@style/text_deslat_style" />
+
+    <TextView
+        android:id="@+id/desLngTv"
+        app:layout_constraintStart_toEndOf="@+id/desLatTv"
+        app:layout_constraintTop_toTopOf="@+id/desLatTv"
+        style="@style/text_deslng_style" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_location_icon"
+        style="@style/fab_style" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Compass</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="destination">Destination</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">CANCEL</string>
+    <string name="localisation_denied">Allow localization for better performance</string>
+    <string name="gps_lost">GPS Signal lost</string>
+    <string name="lat_range">range from -90 to 90 degrees</string>
+    <string name="lng_range">range from -180 to 180 degrees</string>
+</resources>
